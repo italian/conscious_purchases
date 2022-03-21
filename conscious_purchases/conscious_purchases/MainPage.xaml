@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="conscious_purchases.MainPage">
+
+  <StackLayout x:Name="stacklayout"
+        BackgroundColor="LightGoldenrodYellow">
+    <Label Text="Чек-лист для осознанных покупок"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               BackgroundColor="Green"
+               TextColor="White"
+               FontSize="Large"/>
+    <Label Text="Хотите избегать спонтанных трат и подходить к шопингу более вдумчиво?"
+               TextColor="Black"
+               Margin="10, 0, 0, 0"/>
+    <Label Text="Этот чек-лист вам поможет."
+               TextColor="Black"
+               Margin="10, -5, 0, 0"/>
+    <Label Text="Желательно так, чтобы он попадал вам в руки раньше кошелька ;)"
+               TextColor="Black"
+               Margin="10, -5, 0, 0"/>
+    <Label Text="Ответьте на следующие вопросы."
+               TextColor="Black"
+               Margin="10, 0, 0, 0"
+               FontSize="Medium"/>
+    <Label Text="Нужно ли вам это?"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="Medium"
+               BackgroundColor="LightGreen"/>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="button_yes_1"
+                    Grid.Row="0" Grid.Column="0"
+                    Text="Да"
+                    BackgroundColor="IndianRed"
+                    TextColor="Yellow"
+                    Margin="5, 0, 0, 0"
+                    Clicked="Button_yes_1_Clicked"/>
+      <Button x:Name="button_no_1"
+                    Grid.Row="0" Grid.Column="1"
+                    Text="Нет"
+                    BackgroundColor="Green"
+                    TextColor="Yellow"
+                    Margin="0, 0, 5, 0"
+                    Clicked="Button_no_1_Clicked"/>
+    </Grid>
+    <Label x:Name="label_really"
+               Text="Серьезно?"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="Medium"
+               BackgroundColor="LightGreen"
+               IsVisible="false"/>
+    <Grid x:Name="grid_really"
+              IsVisible="false">
+      <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="button_yes_really"
+                    Grid.Row="0" Grid.Column="0"
+                    Text="Да"
+                    BackgroundColor="IndianRed"
+                    TextColor="Yellow"
+                    Margin="5, 0, 0, 0"
+                    Clicked="Button_yes_really_Clicked"/>
+      <Button x:Name="button_no_really"
+                    Grid.Row="0" Grid.Column="1"
+                    Text="Нет"
+                    BackgroundColor="Green"
+                    TextColor="Yellow"
+                    Margin="0, 0, 5, 0"
+                    Clicked="Button_no_really_Clicked"/>
+    </Grid>
+    <Label x:Name="label_yesterday"
+               Text="Вам было нужно это вчера?"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="Medium"
+               BackgroundColor="LightGreen"
+               IsVisible="false"/>
+    <Grid x:Name="grid_yesterday"
+              IsVisible="false">
+      <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="button_yes_yesterday"
+                    Grid.Row="0" Grid.Column="0"
+                    Text="Да"
+                    BackgroundColor="IndianRed"
+                    TextColor="Yellow"
+                    Margin="5, 0, 0, 0"
+                    Clicked="button_yes_yesterday_Clicked"/>
+      <Button x:Name="button_no_yesterday"
+                    Grid.Row="0" Grid.Column="1"
+                    Text="Нет"
+                    BackgroundColor="Green"
+                    TextColor="Yellow"
+                    Margin="0, 0, 5, 0"
+                    Clicked="button_no_yesterday_Clicked"/>
+    </Grid>
+    <Label x:Name="label_rent"
+               Text="Можете ли вы это одолжить или арендовать?"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="Medium"
+               BackgroundColor="LightGreen"
+               IsVisible="false"/>
+    <Grid x:Name="grid_rent"
+              IsVisible="false">
+      <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="button_yes_rent"
+                    Grid.Row="0" Grid.Column="0"
+                    Text="Да"
+                    BackgroundColor="Green"
+                    TextColor="Yellow"
+                    Margin="5, 0, 0, 0"
+                    Clicked="button_yes_rent_Clicked"/>
+      <Button x:Name="button_no_rent"
+                    Grid.Row="0" Grid.Column="1"
+                    Text="Нет"
+                    BackgroundColor="IndianRed"
+                    TextColor="Yellow"
+                    Margin="0, 0, 5, 0"
+                    Clicked="button_no_rent_Clicked"/>
+    </Grid>
+    <Label x:Name="label_keep"
+               Text="Вы хотите это хранить?"
+               HorizontalOptions="Fill"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="Medium"
+               BackgroundColor="LightGreen"
+               IsVisible="false"/>
+    <Grid x:Name="grid_keep"
+              IsVisible="false">
+      <Grid.RowDefinitions>
+        <RowDefinition></RowDefinition>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+      </Grid.ColumnDefinitions>
+      <Button x:Name="button_yes_keep"
+                    Grid.Row="0" Grid.Column="0"
+                    Text="Да"
+                    BackgroundColor="IndianRed"
+                    TextColor="Yellow"
+                    Margin="5, 0, 0, 0"
+                    Clicked="button_yes_keep_Clicked"/>
+      <Button x:Name="button_no_keep"
+                    Grid.Row="0" Grid.Column="1"
+                    Text="Нет"
+                    BackgroundColor="Green"
+                    TextColor="Yellow"
+                    Margin="0, 0, 5, 0"
+                    Clicked="button_no_keep_Clicked"/>
+    </Grid>
+    <Label Text="Основано на инфографике МИФа"
+               TextColor="Black"
+               Margin="0, 0, 10, 0"
+               FontAttributes="Italic"
+               VerticalOptions="EndAndExpand"
+               HorizontalTextAlignment="End"/>
+    <Label Text='По материалам книги "Год без покупок"'
+               TextColor="Black"
+               Margin="0, -5, 10, 0"
+               FontAttributes="Italic"
+               HorizontalTextAlignment="End"/>
+    <Label TextColor="Black"
+               Margin="0, -5, 10, 5"
+               FontAttributes="Italic" 
+               HorizontalTextAlignment="End">
+      <Label.FormattedText>
+        <FormattedString>
+          <FormattedString.Spans>
+            <Span Text="Designed by " />
+            <Span Text="italianbober"
+                              FontAttributes="Italic, Bold" />
+          </FormattedString.Spans>
+        </FormattedString>
+      </Label.FormattedText>
+    </Label>
+  </StackLayout>
+
+</ContentPage>
